@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5]
+        // Add the forEach prototype.
+        Array.prototype.forEach = function(callback){
+            let arr = this // reference of the arr object
+         for(let i=0; i<arr.length; i++){
+            callback(arr[i],i,arr) // parameter
+         }
+        }
+        arr.forEach((e,i,arr)=>{ //arguments
+            console.log(e,i,arr)
+        })
+
+
+    </script>
+</body>
+</html>
